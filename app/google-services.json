@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "712884017177",
+    "project_id": "pachontli-1774b",
+    "storage_bucket": "pachontli-1774b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712884017177:android:6e02cb7e687ad960f47288",
+        "android_client_info": {
+          "package_name": "mx.itesm.pachontli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712884017177-semofhgeusp60g3eotjsluibq1i5ce2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIGKuFM9e0yZk5YY81WYjL0MQgDIHLA1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712884017177-semofhgeusp60g3eotjsluibq1i5ce2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
