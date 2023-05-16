@@ -8,7 +8,6 @@ import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
 import mx.itesm.pachontli.databinding.ActivityLoginBinding
-import mx.itesm.pachontli.view.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 

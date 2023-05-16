@@ -1,12 +1,11 @@
-package mx.itesm.pachontli.view
+package mx.itesm.pachontli
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.firebase.ui.auth.AuthUI
-import mx.itesm.pachontli.LoginActivity
-import mx.itesm.pachontli.R
 import mx.itesm.pachontli.databinding.ActivityMainBinding
+import mx.itesm.pachontli.navigationDrawer.NavigationDrawerActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,6 +30,14 @@ class MainActivity : AppCompatActivity() {
                 println("Sesión cerrada")
             }
             println("cerrando sesión...")
+        }
+
+
+        binding.btnPerro.setOnClickListener {
+
+            val intDrawer = Intent(this, NavigationDrawerActivity::class.java)
+            intDrawer.putExtra("tipo","perro")
+            startActivity(intDrawer)
         }
     }
 
