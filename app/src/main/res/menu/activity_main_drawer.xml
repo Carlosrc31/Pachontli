@@ -9,11 +9,11 @@
             android:icon="@drawable/alimentos"
             android:title="Alimentación" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_veterinarios"
             android:icon="@drawable/veterinaria"
             android:title="Veterinarios cerca" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_interactua"
             android:icon="@drawable/chat"
             android:title="Interactúa" />
     </group>

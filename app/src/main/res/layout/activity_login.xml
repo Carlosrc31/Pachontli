@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="240dp"
         android:layout_height="162dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="#023F51B5"
         android:text="Todo lo que tu mascota necesita"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
@@ -27,7 +27,7 @@
         android:id="@+id/textView2"
         android:layout_width="254dp"
         android:layout_height="65dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="¡Porque también son parte de la familia! "
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#1580C2"
@@ -39,10 +39,11 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="127dp"
+        android:layout_width="200dp"
         android:layout_height="65dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:backgroundTint="#EFFEFF"
+        android:elevation="40dp"
         android:text="Iniciar"
         android:textAlignment="center"
         android:textColor="#1580C2"
@@ -51,17 +52,17 @@
         app:cornerRadius="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.183"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.038"
         app:strokeColor="#1580C2"
-        app:strokeWidth="3dp" />
+        app:strokeWidth="5dp" />
 
     <ImageView
         android:id="@+id/imgLogotipo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

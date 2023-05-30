@@ -1,4 +1,4 @@
-package mx.itesm.pachontli.navigationDrawer.ui.gallery
+package mx.itesm.pachontli.navigationDrawer.ui.Alimentos
 
 import android.content.Intent
 import android.net.Uri
@@ -6,14 +6,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import mx.itesm.pachontli.databinding.FragmentGalleryBinding
+import mx.itesm.pachontli.databinding.FragmentAlimentosBinding
 
-class GalleryFragment : Fragment() {
 
-    private var _binding: FragmentGalleryBinding? = null
+class AlimentosFragment : Fragment() {
+
+    private var _binding: FragmentAlimentosBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,9 +25,9 @@ class GalleryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val galleryViewModel =
-            ViewModelProvider(this).get(GalleryViewModel::class.java)
+            ViewModelProvider(this).get(AlimentosViewModel::class.java)
 
-        _binding = FragmentGalleryBinding.inflate(inflater, container, false)
+        _binding = FragmentAlimentosBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         /* Descomentar, daba error
@@ -41,9 +41,9 @@ class GalleryFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        //Se lanza la aplicación de google maps
+        //Se lanza la aplicación de google maps y busca 'veterinarias cerca'
         val intent = Intent(Intent.ACTION_VIEW).apply {
-            data = Uri.parse("geo:47.6,-122.3?z=18")
+            data = Uri.parse("geo:0,0?q= Veterinarias")
         }
         startActivity(intent)
     }

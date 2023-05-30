@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FCBD29"
-    tools:context=".navigationDrawer.ui.gallery.GalleryFragment" >
+    tools:context=".navigationDrawer.ui.Alimentos.AlimentosFragment" >
 
     <TextView
         android:id="@+id/textView4"

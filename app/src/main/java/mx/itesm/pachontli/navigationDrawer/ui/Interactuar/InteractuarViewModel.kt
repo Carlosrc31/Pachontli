@@ -1,13 +1,13 @@
-package mx.itesm.pachontli.navigationDrawer.ui.gallery
+package mx.itesm.pachontli.navigationDrawer.ui.Interactuar
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class GalleryViewModel : ViewModel() {
+class InteractuarViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is gallery Fragment"
+        value = "This is slideshow Fragment"
     }
     val text: LiveData<String> = _text
 }
