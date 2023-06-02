@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity() {
             intDrawer.putExtra("tipo","perro")
             startActivity(intDrawer)
         }
+
     }
 
 
