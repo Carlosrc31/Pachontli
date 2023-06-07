@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Pachontli"
         tools:targetApi="31">
         <activity
+            android:name=".ListaAlimentosActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddPostActivity"
             android:exported="false" />
         <activity

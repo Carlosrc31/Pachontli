@@ -12,7 +12,7 @@ class AddPostActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddPostBinding
 
-    //Obtenemos al usuario (uid)
+    //Obtenemos al usuario ( poder conocer el uid)
     val usuario = FirebaseAuth.getInstance()
     //Para accede a la db
     private val db = FirebaseFirestore.getInstance()
@@ -26,6 +26,8 @@ class AddPostActivity : AppCompatActivity() {
     }
 
     private fun registrarEventos() {
+
+        //Publicar los posts.
         binding.btnPublicar.setOnClickListener {
             val postText = binding.etPost.text.toString()
             val user = usuario.currentUser?.displayName
@@ -33,18 +35,27 @@ class AddPostActivity : AppCompatActivity() {
 
             val post = Post(user, fecha, postText)
 
-            db.collection("interactuaPosts").add(post)
-                .addOnSuccessListener {
-                    finish()
-                }
-                .addOnFailureListener {
-                    AlertDialog.Builder(this).apply{
-                        setTitle("Error")
-                        setMessage(it.message.toString())
-                        setPositiveButton("Aceptar", null)
-                    }.show()
-                }
-
+            if (postText.isNotEmpty()){
+                //añadir el post en la db
+                db.collection("interactuaPosts").add(post)
+                    .addOnSuccessListener {
+                        finish()
+                    }
+                    .addOnFailureListener {
+                        AlertDialog.Builder(this).apply{
+                            setTitle("Error")
+                            setMessage(it.message.toString())
+                            setPositiveButton("Aceptar", null)
+                        }.show()
+                    }
+            }
+            else{
+                AlertDialog.Builder(this).apply{
+                    setTitle("Error")
+                    setMessage("Ingresa al menos un carácter")
+                    setPositiveButton("Aceptar", null)
+                }.show()
+            }
         }
     }
 

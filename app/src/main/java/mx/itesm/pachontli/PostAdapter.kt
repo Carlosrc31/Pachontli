@@ -42,7 +42,7 @@ class PostAdapter(private val contexto: InteractuarFragment, private val dataset
 
         isLiked(liked, holder.btn_like)
 
-        //Para controla que se quite o se matenga el like (se niega el liked)
+        //Para controlar que se quite o se matenga el like (se niega el liked)
         holder.btn_like.setOnClickListener {
             liked = !liked
             isLiked(liked, holder.btn_like)
