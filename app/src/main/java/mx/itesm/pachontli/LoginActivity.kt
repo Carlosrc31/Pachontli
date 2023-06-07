@@ -3,6 +3,7 @@ package mx.itesm.pachontli
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
@@ -31,8 +32,11 @@ class LoginActivity : AppCompatActivity() {
             pantallaEntrada()
 
         }else{
-            println("Error de autenticación")
-
+            AlertDialog.Builder(this).apply{
+                setTitle("Error")
+                setMessage("Contraseña o usuario incorrecto")
+                setPositiveButton("Aceptar", null)
+            }.show()
         }
     }
 
@@ -44,7 +48,6 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //setContentView(R.layout.activity_login)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
