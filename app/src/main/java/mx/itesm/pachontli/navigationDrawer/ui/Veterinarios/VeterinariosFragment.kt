@@ -9,11 +9,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import mx.itesm.pachontli.databinding.FragmentAlimentosBinding
+import mx.itesm.pachontli.databinding.FragmentVeterinariosBinding
 
 
 class VeterinariosFragment : Fragment() {
 
-    private var _binding: FragmentAlimentosBinding? = null
+    private var _binding: FragmentVeterinariosBinding? = null
+
+    var firstTime = true
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -27,26 +30,36 @@ class VeterinariosFragment : Fragment() {
         val galleryViewModel =
             ViewModelProvider(this).get(VeterinariosViewModel::class.java)
 
-        _binding = FragmentAlimentosBinding.inflate(inflater, container, false)
+        _binding = FragmentVeterinariosBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        /* Descomentar, daba error
-        val textView: TextView = binding.textGallery
-        galleryViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+        registrarEventos()
         return root
     }
 
-    override fun onStart() {
+    private fun registrarEventos() {
+        binding.btnGoogleMaps.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse("geo:0,0?q= Veterinarias")
+            }
+            startActivity(intent)
+        }
+    }
+
+    /*override fun onStart() {
         super.onStart()
 
         //Se lanza la aplicación de google maps y busca 'veterinarias cerca'
-        val intent = Intent(Intent.ACTION_VIEW).apply {
-            data = Uri.parse("geo:0,0?q= Veterinarias")
+
+        if(firstTime) {
+            val intent = Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse("geo:0,0?q= Veterinarias")
+            }
+            startActivity(intent)
+
+            firstTime = false
         }
-        startActivity(intent)
-    }
+    }*/
 
     override fun onDestroyView() {
         super.onDestroyView()

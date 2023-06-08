@@ -54,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
         registrarEventos()
     }
 
-    //Ayuda a dejar que el usuario permamezca en la sesión hasta que se cierre la sesión
+    //Ayuda a dejar que el usuario permanezca en la sesión hasta que se cierre
     override fun onStart() {
         super.onStart()
 
